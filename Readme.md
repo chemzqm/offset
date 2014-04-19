@@ -2,6 +2,8 @@
 
   Get offset of a dom element within the viewport.
 
+  [demo](http://chemzqm.github.io/offset/example/scroll/)
+
 ## Installation
 
     $ component install chemzqm/offset

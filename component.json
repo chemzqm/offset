@@ -12,5 +12,6 @@
   "scripts": [
     "index.js"
   ],
+  "demo": "http://chemzqm.github.io/offset/example/scroll/",
   "repository": "chemzqm/offset"
 }
