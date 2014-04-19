@@ -4,7 +4,7 @@
 
 ## Installation
 
-    $ component install timoxley/offset
+    $ component install chemzqm/offset
 
 ## API
 
