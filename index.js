@@ -1,4 +1,3 @@
-var support = require('dom-support')
 var contains = require('within-document')
 
 /**
@@ -7,7 +6,7 @@ var contains = require('within-document')
  * @api public
  */
 
-module.exports = function offset(el) {
+module.exports = function (el) {
   var doc = el && el.ownerDocument
   if (!doc) return
 
@@ -35,20 +34,5 @@ module.exports = function offset(el) {
   return {
     top: box.top  + scrollTop  - clientTop,
     left: box.left + scrollLeft - clientLeft
-  }
-}
-
-function bodyOffset(body) {
-  var top = body.offsetTop
-  var left = body.offsetLeft
-
-  if (support.doesNotIncludeMarginInBodyOffset) {
-    top  += parseFloat(body.style.marginTop || 0)
-    left += parseFloat(body.style.marginLeft || 0)
-  }
-
-  return {
-    top: top,
-    left: left
   }
 }
