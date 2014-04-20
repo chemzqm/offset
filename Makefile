@@ -10,7 +10,7 @@ doc:
 	@rm -fr .gh-pages
 	@mkdir .gh-pages
 	@mv build .gh-pages/
-	@cp -rf example .gh-pages/
+	@cp example.html .gh-pages/index.html
 	@ghp-import .gh-pages -n -p
 	@rm -fr .gh-pages
 
