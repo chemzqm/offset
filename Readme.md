@@ -2,7 +2,7 @@
 
   Get offset of a dom element within the viewport.
 
-  [demo](http://chemzqm.github.io/offset/example/scroll/)
+  [demo](http://chemzqm.github.io/offset)
 
   **No check for top-level document object**.
 
