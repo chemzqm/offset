@@ -11,12 +11,9 @@ module.exports = function (el) {
   if (!doc) return
 
   // Make sure it's not a disconnected DOM node
-  if (!contains(el)) return box
+  if (!contains(el)) return null;
 
   var body = doc.body
-  if (body === el) {
-    return bodyOffset(el)
-  }
 
   var box = { top: 0, left: 0 }
   if ( typeof el.getBoundingClientRect !== "undefined" ) {

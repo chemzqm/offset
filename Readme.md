@@ -4,6 +4,8 @@
 
   [demo](http://chemzqm.github.io/offset/example/scroll/)
 
+  **No check for top-level document object**.
+
 ## Installation
 
     $ component install chemzqm/offset
