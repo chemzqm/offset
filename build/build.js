@@ -10,7 +10,7 @@ function require(name) {
   var module = require.modules[name];
   if (!module) throw new Error('failed to require "' + name + '"');
 
-  if (module.definition) {
+  if (!('exports' in module) && typeof module.definition === 'function') {
     module.client = module.component = true;
     module.definition.call(this, module.exports = {}, module);
     delete module.definition;
@@ -52,7 +52,6 @@ require.define = function (name, exports) {
     exports: exports
   };
 };
-
 require.register("component~within-document@0.0.1", function (exports, module) {
 
 /**
@@ -86,12 +85,9 @@ module.exports = function (el) {
   if (!doc) return
 
   // Make sure it's not a disconnected DOM node
-  if (!contains(el)) return box
+  if (!contains(el)) return null;
 
   var body = doc.body
-  if (body === el) {
-    return bodyOffset(el)
-  }
 
   var box = { top: 0, left: 0 }
   if ( typeof el.getBoundingClientRect !== "undefined" ) {
